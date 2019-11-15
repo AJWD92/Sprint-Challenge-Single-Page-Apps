@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CharacterCard from "./CharacterCard";
+// import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -22,9 +23,7 @@ export default function CharacterList() {
 
   return (
     <section className="character-list" >
-      {characters.map(character => (
-        <CharacterCard key={character.id}  character={character}/>
-      ))}
+      <SearchForm/>
     </section>
   );
   }

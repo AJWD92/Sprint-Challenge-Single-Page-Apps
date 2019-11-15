@@ -1,21 +1,30 @@
 import React from "react";
 import Header from "./components/Header.js";
 import WelcomePage from './components/WelcomePage';
-import CharacterList from ".//components/CharacterList";
+import CharacterList from "./components/CharacterList";
 import {NavLink, Route} from "react-router-dom"
+import Styled from "styled-components";
+import RmBG from "./assets/RmBg.jpg";
+
+const StyledMain = Styled.main`
+  width: 100%;
+  background: url(${RmBG});
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+`
 
 export default function App() {
   return (
-    <main>
-      <div>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/WelcomePage">Welcome Page</NavLink>
-      <NavLink to="/CharacterList">Character Cast</NavLink>
+    <StyledMain>
+      <div className='topNav'>
+      <NavLink to="/"><button>Home</button></NavLink>
+      <NavLink to="/CharacterList"><button>Character Cast</button></NavLink>
       </div>
-      <Route exact path="/" component={Header}/>
-      <Route exact path='/WelcomePage' component={WelcomePage}/>
+      <Header/>
+      <Route exact path='/' component={WelcomePage}/>
       <Route exact path="/CharacterList" component={CharacterList}/>
-    </main>
+    </StyledMain>
     
   );
 }

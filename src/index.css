@@ -35,5 +35,42 @@ main {
 } */
 
 header h1 {
+  color: #000;
   text-align: center;
+  font-size: 1.8rem;
+}
+
+.topNav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+}
+
+button {
+  
+  background: #000000b3;
+  border: none;
+  color: #6ed309;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background: none;
+  color: #8b0000;
+  
+  
+}
+
+.main-img {
+  margin: 10% 35%;
+}
+
+.search {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  
+
 }
