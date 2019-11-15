@@ -9,10 +9,11 @@ export default function App() {
     <main>
       <div>
       <NavLink to="/">Home</NavLink>
+      <NavLink to="/WelcomePage">Welcome Page</NavLink>
       <NavLink to="/CharacterList">Character Cast</NavLink>
-      <Header />
       </div>
-      <Route exact path="/" component={WelcomePage}/>
+      <Route exact path="/" component={Header}/>
+      <Route exact path='/WelcomePage' component={WelcomePage}/>
       <Route exact path="/CharacterList" component={CharacterList}/>
     </main>
     
